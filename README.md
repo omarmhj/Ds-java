@@ -12,7 +12,7 @@ Créer un projet Gitlab public et cloner dessus le projet du DS.
 
 Générer un fichier Dockerfile qui doit exécuter l'application:
 1) La source doit être une image très légère de openjdk en version 7 et en mode JRE uniquement
-2) L'application est déjà compilée et doit être copiée du dossier target
+2) L'application est déjà compilée et doit être copiée à partir du dossier "target"
 3) Le script "run.sh" doit être copié et doit avoir un droit d'accès en exécution.
 4) Le port 8080 doit être exposé.
 5) La commande de démarrage du container est simplement une exécution de "run.sh"
