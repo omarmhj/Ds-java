@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+    environment {
+        DOCKERHUB_CREDENTIALS = credentials('Omar_8081_Slave')
+    }
+    stages {
+        stage('Build'){
+            steps {
+                
+                bat 'docker build -t omaar0088/Ds_Devops -f build/Dockerfile .'
+            }
+        }
+        stage('push'){
+            steps {
+                
+                bat 'docker push omaar0088/Ds_Devops'
+            }
+        }
+        stage('Cleanup'){
+            steps {
+                bat 'docker rmi omaar0088/Ds_Devops'
+                bat 'docker logout'
+            }
+        }
+    }s
+}
+ 
